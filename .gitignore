@@ -1,0 +1,6 @@
+/codegen/
+/node_modules/
+/public/
+.DS_Store
+AGENTS.md
+CLAUDE.md

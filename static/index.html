@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhyElixir</title>
+    <meta
+      name="description"
+      content="Elixir is a dynamic, general-purpose language designed to empower developers and businesses in building scalable, concurrent, fault-tolerant and high-performance applications."
+    />
+    <meta
+      property="og:title"
+      content="The Language Behind High-Performance Apps"
+    />
+    <meta property="og:image" content="/images/whyelixir.png" />
+    <meta
+      property="og:description"
+      content="Elixir is a dynamic, general-purpose language designed to empower developers and businesses in building scalable, concurrent, fault-tolerant and high-performance applications."
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="apple-touch-icon" href="/images/favicon-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body class="font-montserrat bg-[#08030A] text-white">
+    <div class="bg-[#08030A] text-white font-montserrat">
+      <!-- Header section -->
+      <div class="flex flex-col">
+        <div
+          class="flex items-center justify-center fixed top-0 z-20 w-full h-[109px]"
+          id="whyelixir-header"
+        >
+          <p
+            class="text-[3.5rem] leading-[4.3rem] tracking-[0.0088rem] font-semibold"
+          >
+            WhyElixir
+          </p>
+        </div>
+        <div
+          class="flex flex-col relative w-full min-h-screen justify-center items-center"
+        >
+          <img
+            alt="WhyElixir hero background image 1"
+            loading="lazy"
+            src="/images/whyelixir/whyelixir-hero-bg-lg.png"
+            srcset="
+              /images/whyelixir/whyelixir-hero-bg-sm.png 1720w,
+              /images/whyelixir/whyelixir-hero-bg-md.png 4096w,
+              /images/whyelixir/whyelixir-hero-bg-lg.png 4060w
+            "
+            sizes="100vw"
+            class="object-cover absolute h-full w-full"
+          />
+          <div
+            class="flex relative flex-col items-center justify-center max-w-full min-h-screen text-center text-white"
+          >
+            <img
+              alt="WhyElixir hero background image 2"
+              loading="lazy"
+              src="/images/whyelixir/whyelixir-hero-lg.png"
+              srcset="
+                /images/whyelixir/whyelixir-hero-sm.png 752w,
+                /images/whyelixir/whyelixir-hero-lg.png 753w
+              "
+              sizes="100vw"
+              class="object-cover absolute inset-0 h-[70%] md:h-[80%] mx-auto"
+            />
+            <div class="flex flex-col items-center relative w-[95%] lg:w-[70%]">
+              <div
+                class="font-medium tracking-wide md:tracking-[-0.0305rem] text-[3.2rem] md:text-7xl leading-[4rem] md:leading-[5rem]"
+              >
+                <p>The Language Behind High-Performance Apps</p>
+              </div>
+              <div class="self-center mt-8">
+                <p
+                  class="text-2xl md:text-3xl leading-8 md:leading-[2.5rem] font-normal"
+                >
+                  Elixir is a dynamic, general-purpose language designed to
+                  empower developers and businesses in building scalable,
+                  concurrent, fault-tolerant and high-performance applications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Companies section -->
+          <div class="absolute bottom-0 left-0 right-0">
+            <div
+              class="flex flex-col relative pt-7 lg:px-32 pb-16 w-full bg-white/10 overflow-hidden"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent to-[#08030A] opacity-60 md:opacity-90 pointer-events-none"
+              ></div>
+              <div class="flex items-center mt-5 overflow-hidden">
+                <div class="flex lg:hidden animate-header-x-scroll space-x-14">
+                  <!-- repeat 1 -->
+                  <div class="shrink-0 mt-1">
+                    <img
+                      src="/images/logos/adobe.svg"
+                      alt="Adobe"
+                      width="130"
+                      height="50"
+                    />
+                  </div>
+                  <div class="shrink-0 mt-4">
+                    <img
+                      src="/images/logos/discord.svg"
+                      alt="Discord"
+                      width="177"
+                      height="44"
+                    />
+                  </div>
+                  <div class="shrink-0 mb-2">
+                    <img
+                      src="/images/logos/pepsico.svg"
+                      alt="Pepsico"
+                      width="177"
+                      height="42"
+                    />
+                  </div>
+                  <div class="shrink-0">
+                    <img
+                      src="/images/logos/pinterest.svg"
+                      alt="Pinterest"
+                      width="160"
+                      height="60"
+                    />
+                  </div>
+                  <div class="shrink-0">
+                    <img
+                      src="/images/logos/slack.svg"
+                      alt="Slack"
+                      width="140"
+                      height="60"
+                    />
+                  </div>
+                  <!-- repeat 2 -->
+                  <div class="shrink-0 mt-1">
+                    <img
+                      src="/images/logos/adobe.svg"
+                      alt="Adobe"
+                      width="130"
+                      height="50"
+                    />
+                  </div>
+                  <div class="shrink-0 mt-4">
+                    <img
+                      src="/images/logos/discord.svg"
+                      alt="Discord"
+                      width="177"
+                      height="44"
+                    />
+                  </div>
+                  <div class="shrink-0 mb-2">
+                    <img
+                      src="/images/logos/pepsico.svg"
+                      alt="Pepsico"
+                      width="177"
+                      height="42"
+                    />
+                  </div>
+                  <div class="shrink-0">
+                    <img
+                      src="/images/logos/pinterest.svg"
+                      alt="Pinterest"
+                      width="160"
+                      height="60"
+                    />
+                  </div>
+                  <div class="shrink-0">
+                    <img
+                      src="/images/logos/slack.svg"
+                      alt="Slack"
+                      width="140"
+                      height="60"
+                    />
+                  </div>
+                </div>
+                <div class="hidden lg:flex justify-between w-full space-x-32">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="/images/logos/adobe.svg"
+                      alt="Adobe"
+                      width="130"
+                      height="50"
+                    />
+                  </div>
+                  <div class="flex flex-grow justify-around space-x-11">
+                    <div class="mt-4">
+                      <img
+                        src="/images/logos/discord.svg"
+                        alt="Discord"
+                        class="w-[177px] md:w-[177px] h-[35px] md:h-[44px]"
+                      />
+                    </div>
+                    <div class="mb-2">
+                      <img
+                        src="/images/logos/pepsico.svg"
+                        alt="Pepsico"
+                        width="177"
+                        height="42"
+                      />
+                    </div>
+                    <img
+                      src="/images/logos/pinterest.svg"
+                      alt="Pinterest"
+                      width="160"
+                      height="60"
+                    />
+                  </div>
+                  <div class="flex-shrink-0">
+                    <img
+                      src="/images/logos/slack.svg"
+                      alt="Slack"
+                      class="w-[140px] h-[60px]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Elixir goodness section -->
+      <div class="mt-24 mx-6 md:mx-32">
+        <div class="flex flex-col w-[90%] mx-auto text-center">
+          <div class="section-heading">
+            <p>The Elixir Goodness</p>
+          </div>
+          <div class="section-subheading">
+            <p>Here's why you should consider elixir for your next project</p>
+          </div>
+        </div>
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7 gap-y-10 lg:gap-y-16 mt-5 lg:mt-20 text-center"
+        >
+          <div class="goodness-card card-border">
+            <p class="font-medium text-3xl leading-[2.9rem]">The Language</p>
+            <p
+              class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
+            >
+              Elixir features a clean and expressive syntax inspired by Ruby,
+              emphasizing productivity and readability. The language includes
+              several features designed to promote conciseness, such as
+              Immutable Data, Pattern Matching, Functions as First-Class
+              Citizens, Meta-programming.
+            </p>
+          </div>
+          <div class="goodness-card card-border">
+            <p class="font-medium text-3xl leading-[2.9rem]">
+              Built on top of Erlang Virtual Machine
+            </p>
+            <p
+              class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
+            >
+              One of Elixir's key strengths is its foundation on the Erlang
+              Virtual Machine, which provides the essential features for
+              building scalable, fault-tolerant, distributed, and responsive
+              applications—all crucial elements of a highly available system.
+            </p>
+          </div>
+          <div class="goodness-card card-border">
+            <p class="font-medium text-3xl leading-[2.9rem]">
+              Operation simplicity
+            </p>
+            <p
+              class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
+            >
+              Elixir offers operational simplicity, streamlining the development
+              process to significantly boost productivity and reduce the
+              cognitive load on developers.
+            </p>
+          </div>
+          <div class="goodness-card card-border">
+            <p class="font-medium text-3xl leading-[2.9rem]">
+              Ease of learning
+            </p>
+            <p
+              class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
+            >
+              While functional programming may have a learning curve, Elixir's
+              syntax is relatively straightforward to pick up for developers
+              familiar with languages like Ruby or Python.
+            </p>
+          </div>
+          <div class="goodness-card card-border">
+            <p class="font-medium text-3xl leading-[2.9rem]">
+              Active Community and ecosystem
+            </p>
+            <p
+              class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
+            >
+              The Elixir community is active and growing, providing a wealth of
+              libraries, frameworks (like Phoenix for web development), and
+              resources. The ecosystem continues to evolve, supporting a wide
+              range of use cases.
+            </p>
+          </div>
+          <div class="goodness-card card-border">
+            <p class="font-medium text-3xl leading-[2.9rem]">
+              Comprehensive tooling and documentation
+            </p>
+            <p
+              class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
+            >
+              Elixir and Erlang ship with a great set of tools to ease
+              development including Mix, Hex, Code notebooks, such as
+              Livebook.&nbsp; Exunit, Dialyzer and ExDoc.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Elixir story section -->
+      <div
+        class="flex flex-col mx-6 md:mx-32 mt-24 mb-5 text-white text-xl leading-8 font-normal break-words"
+      >
+        <div class="flex flex-col items-center max-w-full mb-16">
+          <div class="section-heading">
+            <p>The Elixir Story</p>
+          </div>
+          <div class="section-subheading">
+            <p>Major events in the history of Elixir</p>
+          </div>
+        </div>
+        <div class="-mt-20" id="scrollable-cards">
+          <div
+            class="flex md:flex-col lg:hidden overflow-x-auto space-x-6 md:space-x-0 snap-x snap-mandatory w-full hide-scrollbar"
+            id="cards-container"
+          >
+            <div class="story-card card-border">
+              <div class="story-card-date">
+                <p>Mid</p>
+                <p>1980s</p>
+              </div>
+              <div class="story-card-body">
+                <p class="story-card-text">
+                  Erlang is developed by Ericsson, a Swedish telecommunications
+                  company, to support large-scale telephone switching systems
+                  such as the MD110 and ATM switches like the AXD.
+                </p>
+              </div>
+            </div>
+            <div class="story-card card-border">
+              <div class="story-card-date">
+                <p>Late</p>
+                <p>1990s</p>
+              </div>
+              <div class="story-card-body">
+                <p class="story-card-text">
+                  Ericsson open-sourced Erlang, expanding its use beyond
+                  telecoms. The introduction of OTP further established Erlang
+                  as a robust platform for building scalable and fault-tolerant
+                  systems.
+                </p>
+              </div>
+            </div>
+            <div class="story-card card-border">
+              <div class="story-card-date">
+                <p>Internet</p>
+                <p>Era</p>
+              </div>
+              <div class="story-card-body">
+                <p class="story-card-text">
+                  Erlang found new applications in web development and real-time
+                  systems. Its ability to manage thousands of concurrent
+                  connections made it an excellent choice for server-side
+                  projects, exemplified by its use in high-profile applications
+                  like WhatsApp.
+                </p>
+              </div>
+            </div>
+            <div class="story-card card-border">
+              <div class="story-card-date">
+                <p>2012</p>
+              </div>
+              <div class="story-card-body">
+                <p class="story-card-text">
+                  Elixir is introduced by José Valim as a new language built on
+                  the Erlang VM (BEAM). It offers a fresh and more accessible
+                  syntax while leveraging the proven concurrency and
+                  fault-tolerance features of Erlang's virtual machine.
+                </p>
+              </div>
+            </div>
+            <div class="story-card card-border">
+              <div class="story-card-date">
+                <p>Today</p>
+              </div>
+              <div class="story-card-body">
+                <p class="story-card-text">
+                  Both Elixir and Erlang continue to thrive, finding
+                  applications across various industries including web
+                  development, machine learning, embedded systems, and
+                  telecommunications.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            id="bullets-container"
+            class="md:hidden flex justify-center mt-11 space-x-4"
+          >
+            <div
+              class="w-5 h-5 border-2 border-gray-500 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="w-5 h-5 border-2 border-gray-500 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="w-5 h-5 border-2 border-gray-500 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="w-5 h-5 border-2 border-gray-500 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="w-5 h-5 border-2 border-gray-500 rounded-full cursor-pointer"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="hidden lg:flex flex-grow flex-col items-center max-w-full mt-20"
+        >
+          <img
+            src="/images/logos/elixir-timeline.svg"
+            class="w-full h-auto"
+            alt="Elixir Timeline"
+          />
+        </div>
+      </div>
+      <div class="relative w-full h-20">
+        <div class="absolute inset-0 w-full h-full bg-elixir-story"></div>
+      </div>
+      <!-- Extensive libraries section -->
+      <div class="py-10 relative bg-custom-radial-gradient">
+        <div class="mx-6 md:mx-32">
+          <div class="flex flex-col items-center">
+            <div class="section-heading">
+              <p>Extensive libraries available for various domains</p>
+            </div>
+            <div class="section-subheading">
+              <p>
+                The Elixir ecosystem has evolved to support a broad range of
+                domains
+              </p>
+            </div>
+          </div>
+          <div class="bullet-list-extended mt-14">
+            <div class="bullet-item-extended">
+              <div class="bullet-item-extended-icon">
+                <div class="bullet-item-extended-icon-sm">
+                  <img
+                    src="/images/logos/small-bullet.svg"
+                    alt=""
+                    width="46"
+                    height="47"
+                  />
+                </div>
+                <div class="bullet-item-extended-icon-md">
+                  <img
+                    src="/images/logos/large-bullet.svg"
+                    alt=""
+                    width="42"
+                    height="42"
+                  />
+                </div>
+              </div>
+              <div class="bullet-item-extended-content">
+                <p class="lib-item-title">Web development</p>
+                <p class="lib-item-body">
+                  Frameworks like Phoenix and Ash offer a suite of features for
+                  rapidly building rich, interactive web applications. Phoenix
+                  works seamlessly with Elixir's tooling and libraries, such as
+                  Ecto and the Elixir standard library, making it easy to build
+                  comprehensive applications.
+                </p>
+              </div>
+            </div>
+            <div class="bullet-item-extended">
+              <div class="bullet-item-extended-icon">
+                <div class="bullet-item-extended-icon-sm">
+                  <img
+                    src="/images/logos/small-bullet.svg"
+                    alt=""
+                    width="46"
+                    height="47"
+                  />
+                </div>
+                <div class="bullet-item-extended-icon-md">
+                  <img
+                    src="/images/logos/large-bullet.svg"
+                    alt=""
+                    width="42"
+                    height="42"
+                  />
+                </div>
+              </div>
+              <div class="bullet-item-extended-content">
+                <p class="lib-item-title">Machine Learning</p>
+                <p class="lib-item-body">
+                  This includes notable libraries like Nx (Numerical Elixir), a
+                  numerical computing library in Elixir that provides tensor
+                  operations and supports machine learning workflows.
+                </p>
+              </div>
+            </div>
+            <div class="bullet-item-extended">
+              <div class="bullet-item-extended-icon">
+                <div class="bullet-item-extended-icon-sm">
+                  <img
+                    src="/images/logos/small-bullet.svg"
+                    alt=""
+                    width="46"
+                    height="47"
+                  />
+                </div>
+                <div class="bullet-item-extended-icon-md">
+                  <img
+                    src="/images/logos/large-bullet.svg"
+                    alt=""
+                    width="42"
+                    height="42"
+                  />
+                </div>
+              </div>
+              <div class="bullet-item-extended-content">
+                <p class="lib-item-title">Embedded Systems</p>
+                <p class="lib-item-body">
+                  Nerves is a framework designed for building and managing
+                  embedded systems using Elixir. It streamlines the development,
+                  deployment, and maintenance of software for IoT devices and
+                  other embedded systems.
+                </p>
+              </div>
+            </div>
+            <div class="bullet-item-extended">
+              <div class="bullet-item-extended-icon">
+                <div class="bullet-item-extended-icon-sm">
+                  <img
+                    src="/images/logos/small-bullet.svg"
+                    alt=""
+                    width="46"
+                    height="47"
+                  />
+                </div>
+                <div class="bullet-item-extended-icon-md">
+                  <img
+                    src="/images/logos/large-bullet.svg"
+                    alt=""
+                    width="42"
+                    height="42"
+                  />
+                </div>
+              </div>
+              <div class="bullet-item-extended-content">
+                <p class="lib-item-title">Native Applications</p>
+                <p class="lib-item-body">
+                  LiveView Native provides a powerful way to build native mobile
+                  applications with real-time capabilities using the same tools
+                  and paradigms as Phoenix LiveView, streamlining development
+                  and enhancing the user experience across platforms.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-center bg-gradient-to-r from-[#c80bd7] to-[#3be2ee] px-8 py-10 mt-10 rounded-2xl"
+          >
+            <div
+              class="flex items-center w-full md:w-1/2 rounded-xl mr-0 md:mr-8"
+            >
+              <img
+                alt="coding illustration"
+                src="/images/whyelixir/coding-illustration-sm.png"
+                srcset="
+                  /images/whyelixir/coding-illustration-sm.png 1404w,
+                  /images/whyelixir/coding-illustration-md.png 1948w
+                "
+                sizes="100vw"
+              />
+            </div>
+            <div class="mt-10 md:mt-0">
+              <p
+                class="text-[2.4rem] leading-[2.9rem] md:leading-[4rem] font-medium md:ml-6"
+              >
+                Business can achieve more with less
+              </p>
+              <div class="bullet-list mt-4 md:mt-5">
+                <div class="bullet-item">
+                  <div class="bullet-item-icon">
+                    <img
+                      src="/images/logos/small-bullet.svg"
+                      alt=""
+                      width="46"
+                      height="47"
+                    />
+                  </div>
+                  <p
+                    class="self-center text-2xl leading-[2.4rem] tracking-[0.008rem] md:tracking-normal font-normal"
+                  >
+                    High performance, efficiency and maintainability
+                  </p>
+                </div>
+                <div class="bullet-item">
+                  <div class="bullet-item-icon">
+                    <img
+                      src="/images/logos/small-bullet.svg"
+                      alt=""
+                      width="46"
+                      height="47"
+                    />
+                  </div>
+                  <p
+                    class="mt-[6px] text-2xl leading-[2.4rem] tracking-[0.008rem] md:tracking-normal font-normal"
+                  >
+                    The fault-tolerant nature of Elixir can result in higher
+                    system reliability and reduced downtime, which is crucial
+                    for business operations and customer satisfaction.
+                  </p>
+                </div>
+                <div class="bullet-item">
+                  <div class="bullet-item-icon">
+                    <img
+                      src="/images/logos/small-bullet.svg"
+                      alt=""
+                      width="46"
+                      height="47"
+                    />
+                  </div>
+                  <p
+                    class="mt-[6px] text-2xl leading-[2.4rem] tracking-[0.008rem] md:tracking-normal font-normal"
+                  >
+                    Applications built with Elixir can often handle more traffic
+                    with fewer resources, potentially lowering cloud or server
+                    expenses.
+                  </p>
+                </div>
+                <div class="bullet-item">
+                  <div class="bullet-item-icon">
+                    <img
+                      src="/images/logos/small-bullet.svg"
+                      alt=""
+                      width="46"
+                      height="47"
+                    />
+                  </div>
+                  <p
+                    class="self-center text-2xl leading-[2.4rem] tracking-[0.008rem] md:tracking-normal font-normal"
+                  >
+                    Elixir's growing popularity and active development indicate
+                    that it will continue to evolve and stay relevant.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative w-full h-10">
+        <div
+          class="absolute inset-0 w-full h-full bg-extensive-libraries"
+        ></div>
+      </div>
+      <!-- How Elixir stands out section -->
+      <div class="mx-6 md:mx-32">
+        <div class="flex flex-col items-center mt-16">
+          <p class="section-heading">How Elixir stands out</p>
+          <div class="section-subheading">
+            <p>
+              Here's how Elixir stacks up against some languages commonly used
+              for developing and deploying enterprise applications
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row relative">
+          <div
+            class="md:absolute md:left-0 md:top-0 w-full md:w-2/3 lg:w-[40%]"
+          >
+            <img
+              alt="Ligh bulb image"
+              class="object-contain"
+              src="/images/whyelixir/light-bulb-sm.png"
+              srcset="
+                /images/whyelixir/light-bulb-sm.png 1290w,
+                /images/whyelixir/light-bulb-md.png 1692w,
+                /images/whyelixir/light-bulb-lg.png 2271w
+              "
+              sizes="100vw"
+            />
+          </div>
+          <div
+            class="md:ml-[25rem] lg:ml-[38rem] mt-16 space-y-8 w-full relative z-10"
+          >
+            <div class="stands-out-card card-border">
+              <p class="stands-out-card-text">
+                Choosing Elixir over Java or Go offers distinct advantages due
+                to Elixir's superior concurrency and scalability, achieved
+                through its lightweight processes and message-passing model,
+                which mitigates issues like race conditions and the overhead of
+                Java's traditional threads.
+              </p>
+            </div>
+            <div class="stands-out-card card-border">
+              <p class="stands-out-card-text">
+                Elixir provides robust fault tolerance with supervision trees
+                and a "let it crash" philosophy that simplifies error
+                management, whereas Java and Go require more complex or manual
+                error-handling strategies.
+              </p>
+            </div>
+            <div class="stands-out-card card-border">
+              <p class="stands-out-card-text">
+                Elixir's functional programming paradigm emphasizes immutability
+                and reduces boilerplate code, speeding up development.
+              </p>
+            </div>
+            <div class="stands-out-card card-border">
+              <p class="stands-out-card-text">
+                The BEAM VM enables hot code swapping for zero-downtime updates,
+                a feature not natively supported by Java and often needing
+                additional libraries or restarts in Go.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="relative mt-16">
+          <div>
+            <img
+              alt="coding illustration"
+              src="/images/whyelixir/coding-illustration-2-sm.png"
+              srcset="
+                /images/whyelixir/coding-illustration-2-sm.png 1592w,
+                /images/whyelixir/coding-illustration-2-md.png 3776w
+              "
+              sizes="100vw"
+              class="w-full"
+            />
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] mx-auto"
+          >
+            <p class="text-center text-2xl md:text-4xl leading-8 font-semibold">
+              As at 2024, Elixir has risen to be the second most admired
+              programming language to learn
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="relative w-full h-20">
+        <div class="absolute inset-0 w-full h-full bg-elixir-stands-out"></div>
+      </div>
+      <!-- Footer section -->
+      <div class="py-20 bg-custom-radial-gradient">
+        <div class="overflow-hidden w-full">
+          <div class="flex lg:hidden w-full animate-footer-x-scroll space-x-16">
+            <div class="shrink-0">
+              <img
+                src="/images/logos/coloured-slack.svg"
+                alt="Slack"
+                width="140"
+                height="60"
+              />
+            </div>
+            <div class="shrink-0">
+              <img
+                src="/images/logos/coloured-adobe.svg"
+                alt="Adobe"
+                width="130"
+                height="55"
+              />
+            </div>
+            <div class="shrink-0">
+              <img
+                src="/images/logos/whatsapp-green.svg"
+                alt="WhatsApp"
+                width="150"
+                height="50"
+              />
+            </div>
+            <div class="shrink-0">
+              <img
+                src="/images/logos/coloured-pinterest.svg"
+                alt="Pinterest"
+                width="150"
+                height="50"
+              />
+            </div>
+            <div class="shrink-0 mt-3">
+              <img
+                src="/images/logos/discord.svg"
+                alt="Discord"
+                width="177"
+                height="44"
+              />
+            </div>
+            <div class="shrink-0">
+              <img
+                src="/images/logos/coloured-slack.svg"
+                alt="Slack"
+                width="140"
+                height="60"
+              />
+            </div>
+            <div class="shrink-0">
+              <img
+                src="/images/logos/coloured-adobe.svg"
+                alt="Adobe"
+                width="130"
+                height="55"
+              />
+            </div>
+            <div class="shrink-0">
+              <img
+                src="/images/logos/whatsapp-green.svg"
+                alt="WhatsApp"
+                width="150"
+                height="50"
+              />
+            </div>
+            <div class="shrink-0 mt-3">
+              <img
+                src="/images/logos/discord.svg"
+                alt="Discord"
+                width="177"
+                height="44"
+              />
+            </div>
+            <div class="shrink-0">
+              <img
+                src="/images/logos/coloured-pinterest.svg"
+                alt="Pinterest"
+                width="150"
+                height="50"
+              />
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <div class="flex justify-center">
+              <img
+                src="/images/logos/whatsapp-green.svg"
+                alt="WhatsApp"
+                class="w-[150px] md:w-[192px] h-[50px] md:h-[57px]"
+              />
+            </div>
+            <div class="flex justify-between w-[60%] mx-auto mt-3">
+              <img
+                src="/images/logos/coloured-adobe.svg"
+                alt="Adobe"
+                class="w-[130px] md:w-[178px] h-[55px] md:h-[44px]"
+              />
+              <img
+                src="/images/logos/coloured-pinterest.svg"
+                alt="Pinterest"
+                class="w-[150px] md:w-[177px] h-[50px] md:h-[43px]"
+              />
+            </div>
+            <div class="flex justify-between w-[90%] mx-auto mt-3">
+              <img
+                src="/images/logos/coloured-slack.svg"
+                alt="Slack"
+                class="w-[140px] md:w-[192px] h-[60px] md:h-[50px]"
+              />
+              <img
+                src="/images/logos/discord.svg"
+                alt="Discord"
+                class="w-[177px] md:w-[177px] h-[35px] md:h-[44px]"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mx-6 md:mx-32 flex flex-col items-center mt-6 space-y-6">
+          <p
+            class="text-[2.4rem] md:text-[1.9rem] leading-[2.9rem] md:leading-[3.5rem] font-medium"
+          >
+            Proven in Production
+          </p>
+          <p
+            class="text-center text-2xl leading-[2.4rem] tracking-[0.008rem] md:tracking-normal font-normal"
+          >
+            Elixir is used by companies like Adobe, Discord, and Pinterest,
+            which handle millions of users and require high performance and
+            reliability. This real-world validation speaks to its effectiveness
+            in large-scale, demanding environments.
+          </p>
+        </div>
+        <div class="mt-16 pt-8 w-full flex flex-col items-center gap-1">
+          <p class="font-[400] text-[1.6rem] md:text-[1.5rem]">
+            Copyright &copy; <span id="copyright-year"></span> Optimum
+          </p>
+          <p class="font-[400] text-[1.6rem] md:text-[1.5rem]">
+            Powered by
+            <a
+              href="https://combobulate.dev"
+              target="_blank"
+              class="underline hover:opacity-75"
+              >Combobulate</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- Footer section -->
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
