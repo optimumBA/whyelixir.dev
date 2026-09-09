@@ -8,3 +8,9 @@ https://:project.pages.dev/*
 
 https://:deployment.:project.pages.dev/*
   X-Robots-Tag: noindex, nofollow
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/montserrat-v31-latin.woff2
+  Cache-Control: public, max-age=31536000, immutable

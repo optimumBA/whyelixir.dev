@@ -1,3 +1,41 @@
+---
+import { getImage } from "astro:assets";
+
+const sources = import.meta.glob("../../static/images/whyelixir/*.png", {
+  eager: true,
+  import: "default",
+});
+const imageNames = [
+  "coding-illustration-2-md.png",
+  "coding-illustration-2-sm.png",
+  "coding-illustration-md.png",
+  "coding-illustration-sm.png",
+  "light-bulb-lg.png",
+  "light-bulb-md.png",
+  "light-bulb-sm.png",
+  "whyelixir-hero-bg-lg.png",
+  "whyelixir-hero-bg-md.png",
+  "whyelixir-hero-bg-sm.png",
+  "whyelixir-hero-lg.png",
+  "whyelixir-hero-sm.png",
+];
+const images = Object.fromEntries(await Promise.all(imageNames.map(async (name) => {
+  const critical = name.startsWith("whyelixir-hero");
+  return [name, await getImage({
+    src: sources[`../../static/images/whyelixir/${name}`],
+    format: critical ? "avif" : "webp",
+    quality: critical ? 85 : 95,
+  })];
+})));
+const heroBackgroundVariants = await Promise.all([480, 860, 1290].map((width) => getImage({
+  src: sources["../../static/images/whyelixir/whyelixir-hero-bg-sm.png"],
+  format: "avif",
+  quality: 85,
+  width,
+})));
+const heroBackgroundSrcset = heroBackgroundVariants
+  .map((image) => `${image.src} ${image.attributes.width}w`).join(", ");
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,12 +70,7 @@
       href="/images/favicon-16x16.png"
     />
     <link rel="apple-touch-icon" href="/images/favicon-180x180.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="/fonts/montserrat-v31-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/app.css" />
     {import.meta.env.PROD && <script is:inline defer src="/js/analytics.js"></script>}
   </head>
@@ -60,13 +93,13 @@
         >
           <img
             alt="WhyElixir hero background image 1"
-            loading="lazy"
-            src="/images/whyelixir/whyelixir-hero-bg-lg.png"
-            srcset="
-              /images/whyelixir/whyelixir-hero-bg-sm.png 1720w,
-              /images/whyelixir/whyelixir-hero-bg-md.png 4096w,
-              /images/whyelixir/whyelixir-hero-bg-lg.png 4060w
-            "
+            loading="eager"
+            src={images["whyelixir-hero-bg-lg.png"].src}
+            srcset={`${heroBackgroundSrcset},
+              ${images["whyelixir-hero-bg-sm.png"].src} 1720w,
+              ${images["whyelixir-hero-bg-md.png"].src} 4096w,
+              ${images["whyelixir-hero-bg-lg.png"].src} 4060w
+            `}
             sizes="100vw"
             class="object-cover absolute h-full w-full"
           />
@@ -75,12 +108,13 @@
           >
             <img
               alt="WhyElixir hero background image 2"
-              loading="lazy"
-              src="/images/whyelixir/whyelixir-hero-lg.png"
-              srcset="
-                /images/whyelixir/whyelixir-hero-sm.png 752w,
-                /images/whyelixir/whyelixir-hero-lg.png 753w
-              "
+              fetchpriority="high"
+              loading="eager"
+              src={images["whyelixir-hero-lg.png"].src}
+              srcset={`
+                ${images["whyelixir-hero-sm.png"].src} 752w,
+                ${images["whyelixir-hero-lg.png"].src} 753w
+              `}
               sizes="100vw"
               class="object-cover absolute inset-0 h-[70%] md:h-[80%] mx-auto"
             />
@@ -440,6 +474,10 @@
         >
           <img
             src="/images/logos/elixir-timeline.svg"
+            loading="lazy"
+            decoding="async"
+            width="1205"
+            height="982"
             class="w-full h-auto"
             alt="Elixir Timeline"
           />
@@ -587,12 +625,16 @@
               class="flex items-center w-full md:w-1/2 rounded-xl mr-0 md:mr-8"
             >
               <img
-                alt="coding illustration"
-                src="/images/whyelixir/coding-illustration-sm.png"
-                srcset="
-                  /images/whyelixir/coding-illustration-sm.png 1404w,
-                  /images/whyelixir/coding-illustration-md.png 1948w
-                "
+              loading="lazy"
+              decoding="async"
+              alt="coding illustration"
+                src={images["coding-illustration-sm.png"].src}
+              width={images["coding-illustration-sm.png"].attributes.width}
+              height={images["coding-illustration-sm.png"].attributes.height}
+                srcset={`
+                  ${images["coding-illustration-sm.png"].src} 1404w,
+                  ${images["coding-illustration-md.png"].src} 1948w
+                `}
                 sizes="100vw"
               />
             </div>
@@ -694,14 +736,18 @@
             class="md:absolute md:left-0 md:top-0 w-full md:w-2/3 lg:w-[40%]"
           >
             <img
+              loading="lazy"
+              decoding="async"
               alt="Ligh bulb image"
               class="object-contain"
-              src="/images/whyelixir/light-bulb-sm.png"
-              srcset="
-                /images/whyelixir/light-bulb-sm.png 1290w,
-                /images/whyelixir/light-bulb-md.png 1692w,
-                /images/whyelixir/light-bulb-lg.png 2271w
-              "
+              src={images["light-bulb-sm.png"].src}
+              width={images["light-bulb-sm.png"].attributes.width}
+              height={images["light-bulb-sm.png"].attributes.height}
+              srcset={`
+                ${images["light-bulb-sm.png"].src} 1290w,
+                ${images["light-bulb-md.png"].src} 1692w,
+                ${images["light-bulb-lg.png"].src} 2271w
+              `}
               sizes="100vw"
             />
           </div>
@@ -743,12 +789,16 @@
         <div class="relative mt-16">
           <div>
             <img
+              loading="lazy"
+              decoding="async"
               alt="coding illustration"
-              src="/images/whyelixir/coding-illustration-2-sm.png"
-              srcset="
-                /images/whyelixir/coding-illustration-2-sm.png 1592w,
-                /images/whyelixir/coding-illustration-2-md.png 3776w
-              "
+              src={images["coding-illustration-2-sm.png"].src}
+              width={images["coding-illustration-2-sm.png"].attributes.width}
+              height={images["coding-illustration-2-sm.png"].attributes.height}
+              srcset={`
+                ${images["coding-illustration-2-sm.png"].src} 1592w,
+                ${images["coding-illustration-2-md.png"].src} 3776w
+              `}
               sizes="100vw"
               class="w-full"
             />
