@@ -35,6 +35,7 @@ const heroBackgroundVariants = await Promise.all([480, 860, 1290].map((width) =>
 })));
 const heroBackgroundSrcset = heroBackgroundVariants
   .map((image) => `${image.src} ${image.attributes.width}w`).join(", ");
+const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).href;
 ---
 <!doctype html>
 <html lang="en">
@@ -51,7 +52,17 @@ const heroBackgroundSrcset = heroBackgroundVariants
       property="og:title"
       content="The Language Behind High-Performance Apps"
     />
-    <meta property="og:image" content="/images/whyelixir.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:site_name" content="WhyElixir" />
+    <meta property="og:image" content={shareImageUrl} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="372" />
+    <meta property="og:image:alt" content="WhyElixir wordmark on a purple and blue gradient" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={shareImageUrl} />
+    <meta name="twitter:image:alt" content="WhyElixir wordmark on a purple and blue gradient" />
     <meta
       property="og:description"
       content="Elixir is a dynamic, general-purpose language designed to empower developers and businesses in building scalable, concurrent, fault-tolerant and high-performance applications."
@@ -122,7 +133,7 @@ const heroBackgroundSrcset = heroBackgroundVariants
               <div
                 class="font-medium tracking-wide md:tracking-[-0.0305rem] text-[3.2rem] md:text-7xl leading-[4rem] md:leading-[5rem]"
               >
-                <p>The Language Behind High-Performance Apps</p>
+                <h1>The Language Behind High-Performance Apps</h1>
               </div>
               <div class="self-center mt-8">
                 <p
