@@ -1,4 +1,6 @@
 ---
+import SiteInformationLinks from "../components/SiteInformationLinks.astro";
+import AgentMetadata from '../components/AgentMetadata.astro';
 import { getImage } from "astro:assets";
 
 const sources = import.meta.glob("../../static/images/whyelixir/*.png", {
@@ -84,9 +86,9 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
     <link rel="preload" href="/fonts/montserrat-v31-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="/css/app.css" />
     {import.meta.env.PROD && <script is:inline defer src="/js/analytics.js"></script>}
-  </head>
+  <AgentMetadata /></head>
   <body class="font-montserrat bg-[#08030A] text-white">
-    <div class="bg-[#08030A] text-white font-montserrat">
+    <main class="bg-[#08030A] text-white font-montserrat">
       <!-- Header section -->
       <div class="flex flex-col">
         <div
@@ -103,7 +105,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
           class="flex flex-col relative w-full min-h-screen justify-center items-center"
         >
           <img
-            alt="WhyElixir hero background image 1"
+            alt=""
             loading="eager"
             src={images["whyelixir-hero-bg-lg.png"].src}
             srcset={`${heroBackgroundSrcset},
@@ -118,7 +120,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
             class="flex relative flex-col items-center justify-center max-w-full min-h-screen text-center text-white"
           >
             <img
-              alt="WhyElixir hero background image 2"
+              alt=""
               fetchpriority="high"
               loading="eager"
               src={images["whyelixir-hero-lg.png"].src}
@@ -287,9 +289,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
       <!-- Elixir goodness section -->
       <div class="mt-24 mx-6 md:mx-32">
         <div class="flex flex-col w-[90%] mx-auto text-center">
-          <div class="section-heading">
-            <p>The Elixir Goodness</p>
-          </div>
+          <h2 class="section-heading">The Elixir Goodness</h2>
           <div class="section-subheading">
             <p>Here's why you should consider elixir for your next project</p>
           </div>
@@ -298,7 +298,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
           class="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-7 gap-y-10 lg:gap-y-16 mt-5 lg:mt-20 text-center"
         >
           <div class="goodness-card card-border">
-            <p class="font-medium text-3xl leading-[2.9rem]">The Language</p>
+            <h3 class="font-medium text-3xl leading-[2.9rem]">The Language</h3>
             <p
               class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
             >
@@ -310,9 +310,9 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
             </p>
           </div>
           <div class="goodness-card card-border">
-            <p class="font-medium text-3xl leading-[2.9rem]">
+            <h3 class="font-medium text-3xl leading-[2.9rem]">
               Built on top of Erlang Virtual Machine
-            </p>
+            </h3>
             <p
               class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
             >
@@ -323,9 +323,9 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
             </p>
           </div>
           <div class="goodness-card card-border">
-            <p class="font-medium text-3xl leading-[2.9rem]">
+            <h3 class="font-medium text-3xl leading-[2.9rem]">
               Operation simplicity
-            </p>
+            </h3>
             <p
               class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
             >
@@ -335,9 +335,9 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
             </p>
           </div>
           <div class="goodness-card card-border">
-            <p class="font-medium text-3xl leading-[2.9rem]">
+            <h3 class="font-medium text-3xl leading-[2.9rem]">
               Ease of learning
-            </p>
+            </h3>
             <p
               class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
             >
@@ -347,9 +347,9 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
             </p>
           </div>
           <div class="goodness-card card-border">
-            <p class="font-medium text-3xl leading-[2.9rem]">
+            <h3 class="font-medium text-3xl leading-[2.9rem]">
               Active Community and ecosystem
-            </p>
+            </h3>
             <p
               class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
             >
@@ -360,9 +360,9 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
             </p>
           </div>
           <div class="goodness-card card-border">
-            <p class="font-medium text-3xl leading-[2.9rem]">
+            <h3 class="font-medium text-3xl leading-[2.9rem]">
               Comprehensive tooling and documentation
-            </p>
+            </h3>
             <p
               class="text-2xl text-wrap text-opacity-50 leading-[2.4rem] tracking-[0.008rem] font-normal mt-10"
             >
@@ -378,9 +378,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
         class="flex flex-col mx-6 md:mx-32 mt-24 mb-5 text-white text-xl leading-8 font-normal break-words"
       >
         <div class="flex flex-col items-center max-w-full mb-16">
-          <div class="section-heading">
-            <p>The Elixir Story</p>
-          </div>
+          <h2 class="section-heading">The Elixir Story</h2>
           <div class="section-subheading">
             <p>Major events in the history of Elixir</p>
           </div>
@@ -501,9 +499,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
       <div class="py-10 relative bg-custom-radial-gradient">
         <div class="mx-6 md:mx-32">
           <div class="flex flex-col items-center">
-            <div class="section-heading">
-              <p>Extensive libraries available for various domains</p>
-            </div>
+            <h2 class="section-heading">Extensive libraries available for various domains</h2>
             <div class="section-subheading">
               <p>
                 The Elixir ecosystem has evolved to support a broad range of
@@ -532,7 +528,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
                 </div>
               </div>
               <div class="bullet-item-extended-content">
-                <p class="lib-item-title">Web development</p>
+                <h3 class="lib-item-title">Web development</h3>
                 <p class="lib-item-body">
                   Frameworks like Phoenix and Ash offer a suite of features for
                   rapidly building rich, interactive web applications. Phoenix
@@ -562,7 +558,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
                 </div>
               </div>
               <div class="bullet-item-extended-content">
-                <p class="lib-item-title">Machine Learning</p>
+                <h3 class="lib-item-title">Machine Learning</h3>
                 <p class="lib-item-body">
                   This includes notable libraries like Nx (Numerical Elixir), a
                   numerical computing library in Elixir that provides tensor
@@ -590,7 +586,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
                 </div>
               </div>
               <div class="bullet-item-extended-content">
-                <p class="lib-item-title">Embedded Systems</p>
+                <h3 class="lib-item-title">Embedded Systems</h3>
                 <p class="lib-item-body">
                   Nerves is a framework designed for building and managing
                   embedded systems using Elixir. It streamlines the development,
@@ -619,7 +615,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
                 </div>
               </div>
               <div class="bullet-item-extended-content">
-                <p class="lib-item-title">Native Applications</p>
+                <h3 class="lib-item-title">Native Applications</h3>
                 <p class="lib-item-body">
                   LiveView Native provides a powerful way to build native mobile
                   applications with real-time capabilities using the same tools
@@ -650,11 +646,11 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
               />
             </div>
             <div class="mt-10 md:mt-0">
-              <p
+              <h2
                 class="text-[2.4rem] leading-[2.9rem] md:leading-[4rem] font-medium md:ml-6"
               >
                 Business can achieve more with less
-              </p>
+              </h2>
               <div class="bullet-list mt-4 md:mt-5">
                 <div class="bullet-item">
                   <div class="bullet-item-icon">
@@ -734,7 +730,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
       <!-- How Elixir stands out section -->
       <div class="mx-6 md:mx-32">
         <div class="flex flex-col items-center mt-16">
-          <p class="section-heading">How Elixir stands out</p>
+          <h2 class="section-heading">How Elixir stands out</h2>
           <div class="section-subheading">
             <p>
               Here's how Elixir stacks up against some languages commonly used
@@ -948,11 +944,11 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
           </div>
         </div>
         <div class="mx-6 md:mx-32 flex flex-col items-center mt-6 space-y-6">
-          <p
+          <h2
             class="text-[2.4rem] md:text-[1.9rem] leading-[2.9rem] md:leading-[3.5rem] font-medium"
           >
             Proven in Production
-          </p>
+          </h2>
           <p
             class="text-center text-2xl leading-[2.4rem] tracking-[0.008rem] md:tracking-normal font-normal"
           >
@@ -970,7 +966,7 @@ const shareImageUrl = new URL("/images/whyelixir/whyelixir.png", Astro.site).hre
         </div>
       </div>
       <!-- Footer section -->
-    </div>
+    </main>
     <script is:inline src="/js/app.js"></script>
-  </body>
+  <SiteInformationLinks /></body>
 </html>

@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build:css": "tailwindcss -i ./assets/css/app.css -o ./static/css/app.css --minify",
-    "build": "npm run build:css && astro build",
+    "build": "npm run build:css && astro build && python3 scripts/build-agent-content.py",
     "watch:css": "tailwindcss -i ./assets/css/app.css -o ./static/css/app.css --watch",
     "serve": "npm run build:css && concurrently \"npm run watch:css\" \"astro dev\"",
     "preview": "astro preview"

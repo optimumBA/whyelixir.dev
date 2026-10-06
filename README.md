@@ -21,3 +21,7 @@ Watch for changes and serve locally:
 ```bash
 npm run serve
 ```
+
+## Agent-readable pages
+
+The build uses Python 3 through `scripts/build-agent-content.py` to generate Markdown from built HTML. `agent-site.json` supplies public identity and use guidance; authored pages own visible content, and `functions/_middleware.js` negotiates HTML and Markdown.

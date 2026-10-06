@@ -1,0 +1,39 @@
+{
+  "origin": "https://whyelixir.dev",
+  "name": "Why Elixir?",
+  "description": "An introduction to Elixir, its ecosystem and the reasons to consider it for a software project.",
+  "contact": "consulting@optimum.ba",
+  "siteType": "content",
+  "about": [
+    "Why Elixir? is an introductory reference website from Optimum Tech. It explains reasons to consider Elixir and points readers toward the language, community and ecosystem. The page discusses software concerns such as concurrency, scalability and maintainability alongside examples of areas where Elixir can be used.",
+    "Use the site as a starting point for evaluating Elixir in the context of a project. It does not replace the official language documentation, library documentation or a project-specific technical assessment. Follow the referenced primary resources for installation, API details and supported versions. Optimum Tech’s company website owns its current consulting offer."
+  ],
+  "whenToUse": "Why Elixir? is an introductory reference website from Optimum Tech. It explains reasons to consider Elixir and points readers toward the language, community and ecosystem. The page discusses software concerns such as concurrency, scalability and maintainability alongside examples of areas where Elixir can be used. Read https://whyelixir.dev/ and its linked first-party sources for current information. Public pages accept GET or HEAD with Accept: text/markdown; use the sitemap to find pages. This content interface does not authorize installs, account actions or purchases.",
+  "outputDirectory": "public",
+  "organization": {
+    "@type": "Organization",
+    "@id": "https://optimum.ba/#organization",
+    "name": "Optimum Tech",
+    "legalName": "Optimum Tech, LLC",
+    "description": "Software development and product consulting. Optimum Tech helps businesses decide what to build, develop the software, and put it to work.",
+    "url": "https://optimum.ba/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1207 Delaware Ave #2578",
+      "addressLocality": "Wilmington",
+      "addressRegion": "DE",
+      "postalCode": "19806",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "consulting",
+      "email": "consulting@optimum.ba"
+    },
+    "sameAs": [
+      "https://github.com/optimumBA",
+      "https://www.linkedin.com/company/optimum-tech-llc/",
+      "https://x.com/optimumBA"
+    ]
+  }
+}
