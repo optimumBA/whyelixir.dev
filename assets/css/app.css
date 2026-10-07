@@ -263,3 +263,66 @@ html {
 .bullet-item-extended-content {
   @apply flex flex-col mt-3 md:mt-0 gap-y-2;
 }
+
+/* Shared visitor information uses the homepage typography and purple palette. */
+.site-footer {
+  width: 100%;
+  padding: 3.2rem 2.4rem;
+  margin-top: 6.4rem;
+  text-align: center;
+  font-family: var(--font-montserrat);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #fff;
+}
+.site-information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .8rem 2.4rem;
+  margin-top: 1.2rem;
+}
+.site-information a { padding: .6rem 0; }
+.site-information a:hover { text-decoration: underline; text-underline-offset: .4rem; }
+.site-footer a:focus-visible, .information-page a:focus-visible {
+  outline: 2px solid #e9bbff;
+  outline-offset: 5px;
+  border-radius: 2px;
+}
+.information-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: #08030a;
+  color: #fff;
+  font-family: var(--font-montserrat);
+  font-size: 1.8rem;
+  line-height: 1.75;
+}
+.information-header {
+  padding: 2.8rem 2.4rem;
+  text-align: center;
+  background: linear-gradient(120deg, #53056e, #14022e);
+}
+.information-header a {
+  font-size: 3.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: .0088rem;
+}
+.information-content {
+  width: min(100% - 4.8rem, 76rem);
+  margin: 5.6rem auto 0;
+  flex: 1;
+}
+.information-back { font-size: 1.5rem; }
+.information-content h1 { font-size: clamp(3.2rem, 6vw, 4.8rem); line-height: 1.2; font-weight: 600; margin: 2.4rem 0 3.2rem; }
+.information-content h2 { font-size: 2.4rem; font-weight: 500; line-height: 1.4; margin: 3.2rem 0 1.6rem; }
+.information-content p { margin: 0 0 2rem; }
+.information-content a { color: #e9bbff; text-decoration: underline; text-underline-offset: .4rem; overflow-wrap: anywhere; }
+.information-content .information-updated { font-size: 1.4rem; color: #d0c5d5; margin-top: 3.2rem; }
+@media (max-width: 450px) {
+  .information-content { margin-top: 3.2rem; font-size: 1.6rem; }
+  .site-footer { font-size: 1.4rem; margin-top: 4rem; }
+}
